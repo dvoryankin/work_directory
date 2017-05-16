@@ -38,11 +38,9 @@ class EmployeesController < ApplicationController
   end
 
   def for_position
-    position = Position.find(:position_id)
+    position = Position.find(params[:position_id])
     @employees = position.employees
-    'index'
-    # @employees = Employee.all
-    # render :index
+    render 'index'
   end
 
   private
