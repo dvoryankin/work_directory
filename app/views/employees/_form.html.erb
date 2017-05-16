@@ -14,8 +14,8 @@
   <br>
 
   <div class="field">
-    <%= f.label :Date_of_birth %><br>
-    <%= f.text_field :dateofbirth %>
+    <%= f.label :date_of_birth %><br>
+    <%= date_select :employee, :dateofbirth, start_year: 1905 %>
   </div>
   <br>
 

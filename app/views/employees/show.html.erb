@@ -6,7 +6,7 @@
   <strong>Position:</strong>
   <%= link_to @employee.position.title, positions_path%><br>
   <strong>Date of birth:</strong>
-  <%= @employee.dateofbirth %>
+  <%= @employee.dateofbirth.strftime('%v')%>
 </p>
 
 
