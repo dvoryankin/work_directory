@@ -5,7 +5,7 @@
   <%= @position.title %>
 </p>
 
-<%= button_to "Show all #{@position} employers", { :action => "for_position" }, :method => :get %>
+<%= link_to   for_position_path(position_id: @position.id) %>
 
 
 <table>
