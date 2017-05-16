@@ -1,0 +1,11 @@
+<%= form_for(@position) do |f| %>
+    <%= render 'common/errors', resource: @position %>
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "#{ @position.new_record? ? 'Create' : 'Edit' }" %>
+    </div>
+<% end %>

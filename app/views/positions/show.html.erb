@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @position.title %>
+</p>
+
+<%= button_to "Show all #{@position} employers", { :action => "for_position" }, :method => :get %>
+
+
+<table>
+   <tbody>
+      <% Employee.all.each do |p| %>
+      <tr>
+        <td><% if p.position.title == @position.title %>
+          <%= p.name %>
+    <% end %>
+      </tr>
+  <% end %>
+  </td>
+  </tbody>
+</table>
+<br>
+    
+
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>

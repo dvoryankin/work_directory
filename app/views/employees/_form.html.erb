@@ -1,0 +1,25 @@
+<%= form_for(@employee) do |f| %>
+ <%= render 'common/errors', resource: @employee %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :position, "Position" %>
+    <%= f.collection_select :position_id, Position.all, :id, :title %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :Date_of_birth %><br>
+    <%= f.text_field :dateofbirth %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
