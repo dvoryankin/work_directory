@@ -13,9 +13,9 @@ positions = Position.create([{ title: 'Doctor' },
                              { title: 'Manager' }])
 
 
-20.times do
+40.times do
   Employee.create(name: "#{(((0...8).map { (65 + rand(26)).chr }.join)+' ') * 3}",
-                   dateofbirth: "Date.today - rand(40).years",
+                   dateofbirth: "#{Date.today - rand(40).years}",
                     position_id: rand(1..5)) 
 end
 
