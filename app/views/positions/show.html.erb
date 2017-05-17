@@ -7,7 +7,6 @@
 
 <%= link_to  "Список работников должности #{@position.title}" , for_position_path(position_id: @position.id)%>
 
-
 <table>
    <tbody>
       <% Employee.all.each do |p| %>
@@ -20,9 +19,8 @@
   </td>
   </tbody>
 </table>
-<br>
-    
 
+<br>
 
 <%= link_to 'Edit', edit_position_path(@position) %> |
 <%= link_to 'Back', positions_path %>

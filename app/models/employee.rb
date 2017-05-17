@@ -2,7 +2,7 @@ class Employee < ActiveRecord::Base
   validates :name, presence: true, length: {maximum: 255}, uniqueness: true
   validates :position, presence: true
   validates :name, format: { with: /(\w+)\s+(\w+)\s+(\w+)/, message: 'field will contain name, surname and lastname'}
-  validate  :date_of_birth_cannot_be_in_the_future# :name_check, 
+  validate  :date_of_birth_cannot_be_in_the_future# :name_check
 
   belongs_to :position
 
