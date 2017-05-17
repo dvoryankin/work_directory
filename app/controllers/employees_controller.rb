@@ -2,7 +2,7 @@ class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
 
   def index
-    @employees = Employee.all
+    @employees = Employee.page(params[:page]).per(5)
   end
 
   def show
@@ -40,7 +40,7 @@ class EmployeesController < ApplicationController
 
   def for_position
     position = Position.find(params[:position_id])
-    @employees = position.employees
+    @employees = Employee.page(params[:page]).per(5)
     render 'index'
   end
 

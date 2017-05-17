@@ -21,9 +21,10 @@
       </tr>
     <% end %>
   </tbody>
+  <%= paginate @positions%>
 </table>
 
 <br>
-<%= paginate @positions%>
+
 
 <%= link_to 'New Position', new_position_path %>
