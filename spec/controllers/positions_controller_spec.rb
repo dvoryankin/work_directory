@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe PositionsController :controller do
+RSpec.describe PositionsController, type: :controller do
   describe 'GET #index' do
     it 'populate an array of all positions' do
       position1 = FactoryGirl.create(:position)

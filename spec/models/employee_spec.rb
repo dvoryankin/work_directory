@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Employee, type: :model do
-  position = Position.create(title: "Engineer")
+  position = FactoryGirl.create(:position)
   let(:position) { create(:position) }
-  
+
   it 'validates presence of name' do
     expect(Employee.new(name: '',dateofbirth: "#{Date.today - rand(40).years}", position: position)).to_not be_valid
   end
@@ -19,7 +19,7 @@ RSpec.describe Employee, type: :model do
   end
 
   it 'validates name to contain three words' do
-    expect(Employee.new(name: "dfass sadfsdf ",
+    expect(Employee.new(name: "dfass sadfsdf asdfsdf ",
                         dateofbirth: "#{Date.today - rand(40).years}", position: position)).to be_valid
   end
 end
