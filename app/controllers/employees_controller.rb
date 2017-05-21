@@ -19,7 +19,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
     
     if @employee.save
-      redirect_to @employee, notice: 'Record was successfully created.'
+      redirect_to @employee, notice: 'Employee was successfully created.'
     else
       render :new
     end

@@ -16,7 +16,7 @@ class PositionsController < ApplicationController
     @position = Position.new(position_params)
 
     if @position.save
-      redirect_to @position
+      redirect_to @position, notice: 'Position was successfully created.'
     else
       render :new
     end

@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :position do
-    title "MyString"
+    title "Doctor"
   end  
 end
